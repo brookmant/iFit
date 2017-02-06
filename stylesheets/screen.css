@@ -156,7 +156,7 @@ nav .sub-menu li a:hover {
 }
 /* line 91, ../sass/screen.scss */
 nav header {
-  width: 620px;
+  max-width: 620px;
   position: relative;
   margin: 420px 250px auto;
 }
@@ -178,7 +178,7 @@ nav header p {
 
 /* line 110, ../sass/screen.scss */
 section {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 /* line 113, ../sass/screen.scss */
@@ -199,7 +199,7 @@ section button {
   text-align: center;
   margin: 500px auto 20px;
   display: block;
-  width: 250px;
+  min-width: 250px;
 }
 
 /* line 131, ../sass/screen.scss */
@@ -215,22 +215,42 @@ section button {
 }
 /* line 138, ../sass/screen.scss */
 .quote section blockquote {
+  margin: 0 auto;
+  max-width: 800px;
   color: #fdfdfd;
 }
+/* line 142, ../sass/screen.scss */
+.quote section blockquote span {
+  margin-top: 15px;
+  color: #0097d9;
+  font-family: 'Georgia', san-serif;
+  font-size: 18px;
+  display: block;
+  text-align: right;
+}
+/* line 150, ../sass/screen.scss */
+.quote section blockquote:before {
+  background-image: url(../assets/quote.png);
+  display: block;
+}
 
-/* line 143, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .call-out {
   margin: 20px auto;
-  width: 870px;
+  max-width: 870px;
   padding: 20px;
 }
-/* line 147, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .call-out span {
   padding-right: 20px;
   font-size: 34px;
 }
+/* line 165, ../sass/screen.scss */
+.call-out button {
+  min-width: 250px;
+}
 
-/* line 156, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 button {
   color: #fdfdfd;
   text-transform: uppercase;
@@ -241,25 +261,25 @@ button {
   font-size: 17.5px;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .tiles ul {
   margin-bottom: 20px;
   clear: both;
 }
-/* line 169, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .tiles ul li {
   margin: 20px 10px;
   float: left;
   display: inline-block;
 }
 
-/* line 178, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .tile h2 {
   font-weight: bold;
   font-size: 16px;
   color: #424242;
 }
-/* line 183, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .tile i {
   font-family: 'Georgia', san-serif;
   color: #929292;
@@ -267,26 +287,39 @@ button {
   font-style: italic;
 }
 
-/* line 191, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 footer {
   background-color: #2b2b2b;
-  color: #747475;
+  background-image: url(../assets/footer-bg.png);
+  background-repeat: repeat;
   height: 40px;
   padding: 20px;
+  color: #747475;
   font-size: 10px;
   font-weight: bold;
 }
-/* line 198, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 footer ul {
   padding: 20px;
   float: left;
 }
-/* line 201, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 footer ul li {
   padding: 0 7px;
   display: inline-block;
 }
-/* line 206, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
+footer ul li a {
+  color: #747475;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 226, ../sass/screen.scss */
+footer ul li a i {
+  font-size: 12px;
+}
+/* line 232, ../sass/screen.scss */
 footer ul.copyright {
   float: right;
 }

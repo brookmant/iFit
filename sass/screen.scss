@@ -89,7 +89,7 @@ nav {
 		}
 	}
 	header {
-	    width: 620px;
+	    max-width: 620px;
 	    position: relative;
 	    margin: 420px 250px auto;
 		h1 {
@@ -108,7 +108,7 @@ nav {
 	}
 }
 section {
-	width: 1100px;
+	max-width: 1100px;
     margin: 0 auto;
 	h1 {
 		text-align: center;
@@ -125,7 +125,7 @@ section {
 		text-align: center;
 	    margin: 500px auto 20px;
 	    display: block;
-	    width: 250px;
+	    min-width: 250px;
 	}
 }
 .quote {
@@ -136,19 +136,34 @@ section {
 		section  {
 			margin: 20px auto 20px;
 			blockquote {
+				margin: 0 auto;
+				max-width: 800px;
 				color: $color-primary;
+				span {
+					margin-top:15px;
+					color: $cta-color;
+					font-family: 'Georgia', san-serif;
+					font-size:18px;
+					display: block;
+					text-align: right;
+				}
+			&:before {
+				 background-image: url(../assets/quote.png);
+				 display: block;
+				}
 			}
 		}
 	}
 .call-out {
 	margin: 20px auto;
-	width: 870px;
+	max-width: 870px;
 	padding:20px;
 	span {
 	  padding-right:20px;
 	  font-size: $font-34;
 	}
 	button {
+		min-width: 250px;
 	}
 }
 
@@ -190,9 +205,11 @@ button {
 
 footer {
 	background-color: $color-default;
-	color:$color-gry;
+	background-image: url(../assets/footer-bg.png);
+	background-repeat: repeat;
 	height: 40px;
 	padding:20px;
+	color:$color-gry;
 	font-size: 10px;
 	font-weight: bold;
 	ul {
@@ -201,6 +218,15 @@ footer {
 		li {
 	    padding:0 7px;
 		display:inline-block;
+		 a {
+		 	color:$color-gry;
+			font-size: 10px;
+			font-weight: bold;
+			text-decoration: none;
+			i {
+				font-size: 12px;
+			}
+		 }
 		}
 	}
 	ul.copyright {
