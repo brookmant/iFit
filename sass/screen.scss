@@ -11,6 +11,11 @@ $color-primary: #fdfdfd; //white
 $cta-color: #0097d9; //btn blue
 $color-default: #2b2b2b; //dark gray
 $color-gry: #747475; // gray
+$color-lgt: #929292; //light gray
+$font-34: 34px;
+$font-17: 17.5px;
+$color-black: #1e1e1e; //blacks
+$color-body: #424242; //body text
 
 body {
 	font: 100% $font-stack;
@@ -57,24 +62,26 @@ nav {
 	 	background-color: rgba(251,249,247, 0.8);
 		clear:both;
 		border-bottom: 1px solid #929292;
-		.sub-menu-header {
-			 h1 {
-				float:left !important;
+			 h1.sub-menu-header {
+				float:left;
+				font-weight: bold;
+				font-size: $font-17;
+				a {
+					text-decoration: none;
+					}
 				}
-			}
 		li {
 		float:right;
 		padding-left:20px;
 		display:inline-block;
-
 			a {
 			 letter-spacing: 1px;
 			 color: #929292;
-			 font-size:13px;
+			 font-size:12px;
 		   	 text-transform: uppercase;
 		   	  text-decoration:none;
 		   	  &:hover {
-		   	  	font-weight:bolder;
+		   	  	font-weight:bold;
 		   	  	color:#424242;
 		   	  	text-decoration:underline;
 		   	  }
@@ -88,29 +95,97 @@ nav {
 		h1 {
 			font-weight: lighter;
 			font-size:52px;
+			line-height: 44px;
 			text-transform: uppercase;
 			color:$color-primary;
-		
+		}
+		p {
+			margin-top:20px;
+			color: $color-primary;
+			font-weight: normal;
+			font-size: $font-17;
 		}
 	}
 }
 section {
+	width: 1100px;
+    margin: 0 auto;
 	h1 {
 		text-align: center;
 		padding:20px;
-		font-size:34px;
+		font-size:$font-34;
 	}
-	.description {
-		color: $color-primary;
+	p {
+		font-size: $font-17;
+		color:$color-body;
+		text-align: center;
+		line-height: 22px;
+	}
+	button {
+		text-align: center;
+	    margin: 500px auto 20px;
+	    display: block;
+	    width: 250px;
+	}
+}
+.quote {
+		height: 100px;
+		clear:both;
+		padding:40px;
+		background-color:$color-black;
+		section  {
+			margin: 20px auto 20px;
+			blockquote {
+				color: $color-primary;
+			}
+		}
+	}
+.call-out {
+	margin: 20px auto;
+	width: 870px;
+	padding:20px;
+	span {
+	  padding-right:20px;
+	  font-size: $font-34;
+	}
+	button {
 	}
 }
 
 //Buttons
-
 button {
 	color: $color-primary;
 	text-transform: uppercase;
 	background-color:$cta-color;
+	border:none;
+	border-radius: none;
+	padding:20px;
+	font-size: $font-17;
+}
+.tiles {
+	ul {
+		margin-bottom: 20px;
+		clear:both;
+		li {
+		margin: 20px 10px;
+		float: left;
+	    display: inline-block;
+		}
+	}
+}
+
+.tile {
+	h2 {
+		font-weight: bold;
+		font-size:16px;
+		color:$color-body;
+	}
+	i {
+		font-family: 'Georgia', san-serif;
+		color: $color-lgt;
+		font-size:12px;
+	 	font-style: italic;
+	}
 }
 
 footer {
@@ -118,10 +193,13 @@ footer {
 	color:$color-gry;
 	height: 40px;
 	padding:20px;
+	font-size: 10px;
+	font-weight: bold;
 	ul {
 		padding:20px;
 		float:left;
 		li {
+	    padding:0 7px;
 		display:inline-block;
 		}
 	}

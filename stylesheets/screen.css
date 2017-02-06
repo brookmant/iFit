@@ -67,12 +67,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 body {
   font: 100% Roboto, sans-serif;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 .container {
   background-image: url(../assets/main-banner.jpg) !important;
   height: 933px;
@@ -80,13 +80,13 @@ body {
   background-repeat: no-repeat;
 }
 
-/* line 24, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 nav {
   background-color: #2b2b2b;
   opacity: 1;
   height: auto;
 }
-/* line 28, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 nav .logo {
   width: 52px;
   height: 23px;
@@ -94,18 +94,18 @@ nav .logo {
   float: left !important;
   display: block;
 }
-/* line 35, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 nav .top-menu {
   background-color: rgba(43, 43, 43, 0.7);
   padding: 20px;
   height: 30px;
 }
-/* line 39, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 nav .top-menu li {
   display: inline-block;
   float: right;
 }
-/* line 42, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 nav .top-menu li a {
   font-weight: bolder;
   letter-spacing: 1px;
@@ -115,7 +115,7 @@ nav .top-menu li a {
   text-decoration: none;
   padding-left: 20px;
 }
-/* line 53, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 nav .sub-menu {
   padding: 20px;
   height: 20px;
@@ -124,79 +124,169 @@ nav .sub-menu {
   clear: both;
   border-bottom: 1px solid #929292;
 }
-/* line 61, ../sass/screen.scss */
-nav .sub-menu .sub-menu-header h1 {
-  float: left !important;
-}
 /* line 65, ../sass/screen.scss */
+nav .sub-menu h1.sub-menu-header {
+  float: left;
+  font-weight: bold;
+  font-size: 17.5px;
+}
+/* line 69, ../sass/screen.scss */
+nav .sub-menu h1.sub-menu-header a {
+  text-decoration: none;
+}
+/* line 73, ../sass/screen.scss */
 nav .sub-menu li {
   float: right;
   padding-left: 20px;
   display: inline-block;
 }
-/* line 70, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 nav .sub-menu li a {
   letter-spacing: 1px;
   color: #929292;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 76, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 nav .sub-menu li a:hover {
-  font-weight: bolder;
+  font-weight: bold;
   color: #424242;
   text-decoration: underline;
 }
-/* line 84, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 nav header {
   width: 620px;
   position: relative;
   margin: 420px 250px auto;
 }
-/* line 88, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 nav header h1 {
   font-weight: lighter;
   font-size: 52px;
+  line-height: 44px;
   text-transform: uppercase;
   color: #fdfdfd;
 }
+/* line 102, ../sass/screen.scss */
+nav header p {
+  margin-top: 20px;
+  color: #fdfdfd;
+  font-weight: normal;
+  font-size: 17.5px;
+}
 
-/* line 98, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
+section {
+  width: 1100px;
+  margin: 0 auto;
+}
+/* line 113, ../sass/screen.scss */
 section h1 {
   text-align: center;
   padding: 20px;
   font-size: 34px;
 }
-/* line 103, ../sass/screen.scss */
-section .description {
+/* line 118, ../sass/screen.scss */
+section p {
+  font-size: 17.5px;
+  color: #424242;
+  text-align: center;
+  line-height: 22px;
+}
+/* line 124, ../sass/screen.scss */
+section button {
+  text-align: center;
+  margin: 500px auto 20px;
+  display: block;
+  width: 250px;
+}
+
+/* line 131, ../sass/screen.scss */
+.quote {
+  height: 100px;
+  clear: both;
+  padding: 40px;
+  background-color: #1e1e1e;
+}
+/* line 136, ../sass/screen.scss */
+.quote section {
+  margin: 20px auto 20px;
+}
+/* line 138, ../sass/screen.scss */
+.quote section blockquote {
   color: #fdfdfd;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
+.call-out {
+  margin: 20px auto;
+  width: 870px;
+  padding: 20px;
+}
+/* line 147, ../sass/screen.scss */
+.call-out span {
+  padding-right: 20px;
+  font-size: 34px;
+}
+
+/* line 156, ../sass/screen.scss */
 button {
   color: #fdfdfd;
   text-transform: uppercase;
   background-color: #0097d9;
+  border: none;
+  border-radius: none;
+  padding: 20px;
+  font-size: 17.5px;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
+.tiles ul {
+  margin-bottom: 20px;
+  clear: both;
+}
+/* line 169, ../sass/screen.scss */
+.tiles ul li {
+  margin: 20px 10px;
+  float: left;
+  display: inline-block;
+}
+
+/* line 178, ../sass/screen.scss */
+.tile h2 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #424242;
+}
+/* line 183, ../sass/screen.scss */
+.tile i {
+  font-family: 'Georgia', san-serif;
+  color: #929292;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* line 191, ../sass/screen.scss */
 footer {
   background-color: #2b2b2b;
   color: #747475;
   height: 40px;
   padding: 20px;
+  font-size: 10px;
+  font-weight: bold;
 }
-/* line 121, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 footer ul {
   padding: 20px;
   float: left;
 }
-/* line 124, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 footer ul li {
+  padding: 0 7px;
   display: inline-block;
 }
-/* line 128, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 footer ul.copyright {
   float: right;
 }
