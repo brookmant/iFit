@@ -5,15 +5,24 @@
 
 @import "compass/reset";
 
+//variables
+$font-stack: Roboto, sans-serif;
+$color-primary: #fdfdfd; //white
+$cta-color: #0097d9; //btn blue
+$color-default: #2b2b2b; //dark gray
+$color-gry: #747475; // gray
+
 body {
-	font-family: 'Roboto', sans-serif;
+	font: 100% $font-stack;
 }
 .container {
-	background-image: url('assets/main-banner.jpg');
+	background-image: url(../assets/main-banner.jpg) !important;
 	height:933px;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 nav {
-	background-color: #2b2b2b;
+	background-color: $color-default;
 	opacity: 1;
 	height: auto;
 	.logo {
@@ -24,13 +33,16 @@ nav {
     		display: block;
 			}
 	.top-menu {
+		background-color: rgba(43,43,43,0.7);
 		padding:20px;
+		height: 30px;
 	   li {
 	   	display:inline-block;
 	   	float:right;
 		   	a {
+		   	font-weight: bolder;
 		   	letter-spacing: 1px;
-		   	color: #fff;
+		   	color: $color-primary;
 		   	font-size:13px;
 		   	text-transform: uppercase;
 		   	text-decoration:none;
@@ -40,8 +52,9 @@ nav {
 	}
 	.sub-menu {
 		padding:20px;
-		height:auto;
-	 	background-color: #fbf9f7;
+		height:20px;
+		font-weight:lighter;
+	 	background-color: rgba(251,249,247, 0.8);
 		clear:both;
 		border-bottom: 1px solid #929292;
 		.sub-menu-header {
@@ -61,11 +74,59 @@ nav {
 		   	 text-transform: uppercase;
 		   	  text-decoration:none;
 		   	  &:hover {
-		   	  	font-weight:bold;
+		   	  	font-weight:bolder;
 		   	  	color:#424242;
 		   	  	text-decoration:underline;
 		   	  }
 			}
 		}
 	}
+	header {
+	    width: 620px;
+	    position: relative;
+	    margin: 420px 250px auto;
+		h1 {
+			font-weight: lighter;
+			font-size:52px;
+			text-transform: uppercase;
+			color:$color-primary;
+		
+		}
+	}
 }
+section {
+	h1 {
+		text-align: center;
+		padding:20px;
+		font-size:34px;
+	}
+	.description {
+		color: $color-primary;
+	}
+}
+
+//Buttons
+
+button {
+	color: $color-primary;
+	text-transform: uppercase;
+	background-color:$cta-color;
+}
+
+footer {
+	background-color: $color-default;
+	color:$color-gry;
+	height: 40px;
+	padding:20px;
+	ul {
+		padding:20px;
+		float:left;
+		li {
+		display:inline-block;
+		}
+	}
+	ul.copyright {
+			float:right;
+		}
+	}
+
