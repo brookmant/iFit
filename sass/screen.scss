@@ -294,3 +294,6 @@ footer {
 .carousel-indicators li {
 	border: 1px solid $cta-color;
 }
+.carousel-indicators {
+    bottom: -50px;
+}

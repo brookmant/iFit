@@ -392,3 +392,8 @@ footer ul.copyright {
 .carousel-indicators li {
   border: 1px solid #0097d9;
 }
+
+/* line 297, ../sass/screen.scss */
+.carousel-indicators {
+  bottom: -50px;
+}
