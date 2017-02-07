@@ -17,19 +17,37 @@ $font-17: 17.5px;
 $color-black: #1e1e1e; //blacks
 $color-body: #424242; //body text
 
+//bootstrap override
+* {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
 body {
 	font: 100% $font-stack;
 }
-.container {
+a:focus, a:hover {
+	color: inherit;
+}
+.ifit-container {
 	background-image: url(../assets/main-banner.jpg) !important;
 	height:933px;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 nav {
 	background-color: $color-default;
 	opacity: 1;
 	height: auto;
+	.fixed-nav {
+		position:fixed;
+		width:100%;
+		top: 0;
+    	z-index: 2;
+	}
 	.logo {
 			width: 52px;
 			height:23px;
@@ -67,6 +85,7 @@ nav {
 				font-weight: bold;
 				font-size: $font-17;
 				a {
+					color: inherit;
 					text-decoration: none;
 					}
 				}
@@ -91,8 +110,9 @@ nav {
 	header {
 	    max-width: 620px;
 	    position: relative;
-	    margin: 420px 250px auto;
+	    margin: 0px 250px auto;
 		h1 {
+			padding-top:420px;
 			font-weight: lighter;
 			font-size:52px;
 			line-height: 44px;
@@ -108,7 +128,7 @@ nav {
 	}
 }
 section {
-	max-width: 1100px;
+	max-width: 1050px;
     margin: 0 auto;
 	h1 {
 		text-align: center;
@@ -123,46 +143,57 @@ section {
 	}
 	button {
 		text-align: center;
-	    margin: 500px auto 20px;
+	    margin: 500px auto 75px;
 	    display: block;
 	    min-width: 250px;
 	}
 }
 .quote {
-		height: 100px;
+		height: 275px;
 		clear:both;
 		padding:40px;
 		background-color:$color-black;
 		section  {
-			margin: 20px auto 20px;
+			margin-top: 57px;
 			blockquote {
-				margin: 0 auto;
-				max-width: 800px;
-				color: $color-primary;
+				 margin: 0 auto;
+				 max-width: 100%;
+				 background-image: url(../assets/quote.png);  
+				 background-position: top left;
+				 background-repeat: no-repeat;
+				 background-position: 0px 10px;
+    			 padding: 1.5em 7em;
+				p {
+					color: $color-primary;
+					line-height: 28px;
+				}
 				span {
-					margin-top:15px;
+					margin-top:45px;
 					color: $cta-color;
-					font-family: 'Georgia', san-serif;
+					font-family: 'Georgia', sans-serif;
 					font-size:18px;
 					display: block;
 					text-align: right;
+					position: relative;
+    				left: 4em;
 				}
-			&:before {
-				 background-image: url(../assets/quote.png);
-				 display: block;
-				}
-			}
 		}
 	}
+}
 .call-out {
-	margin: 20px auto;
-	max-width: 870px;
-	padding:20px;
+	margin: 0px auto;
+	max-width: 63%;
+	height:135px;
 	span {
+	  margin-top:36px;
 	  padding-right:20px;
 	  font-size: $font-34;
+	  display: block;
+	  float: left;
+	  line-height: 1.75em;
 	}
 	button {
+		margin-top:36px;
 		min-width: 250px;
 	}
 }
@@ -185,6 +216,13 @@ button {
 		margin: 20px 10px;
 		float: left;
 	    display: inline-block;
+	    img:hover {
+			opacity: .7;
+			transform: scale(0.9, 0.9);
+			-ms-transform: scale(0.9, 0.9);
+			-webkit-transform: scale(0.9, 0.9);
+	    	}
+	    	
 		}
 	}
 }
@@ -196,7 +234,7 @@ button {
 		color:$color-body;
 	}
 	i {
-		font-family: 'Georgia', san-serif;
+		font-family: 'Georgia', sans-serif;
 		color: $color-lgt;
 		font-size:12px;
 	 	font-style: italic;
@@ -207,7 +245,7 @@ footer {
 	background-color: $color-default;
 	background-image: url(../assets/footer-bg.png);
 	background-repeat: repeat;
-	height: 40px;
+	height: 48px;
 	padding:20px;
 	color:$color-gry;
 	font-size: 10px;
@@ -234,3 +272,25 @@ footer {
 		}
 	}
 
+	//animation
+
+	.fading  {
+	 opacity:0;
+}
+
+.continue {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.fa .fa-search {
+	  transform: rotate(90deg);
+	  animation: pulse 5s infinite;
+}
+.carousel-indicators .active {
+	background-color: $cta-color;
+}
+.carousel-indicators li {
+	border: 1px solid $cta-color;
+}
